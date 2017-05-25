@@ -2,6 +2,11 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+      
+    jshint: {
+        all: ['js/*.js']
+    }, 
+      
   	sass: {
   		options: {
   			sourceMap: true
@@ -23,6 +28,7 @@ module.exports = function(grunt) {
   			}]
   		}
   	},
+      
       watch: {
           scripts: {
             files: ['sass/*.sass'],
@@ -36,10 +42,10 @@ module.exports = function(grunt) {
 
   });
   // Load the plugins tasks 
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-sass', 'grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
   
-  grunt.registerTask('default', ['sass', 'imagemin']);
+  grunt.registerTask('default', ['sass', 'imagemin', 'jshint']);
 };
