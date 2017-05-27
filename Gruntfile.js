@@ -17,7 +17,7 @@ module.exports = function(grunt) {
   			}
   		}
   	},
-
+    //image grunt
   	imagemin: {
   		dynamic: {
   			files: [{
@@ -38,6 +38,9 @@ module.exports = function(grunt) {
         },
     } 
 }
+      
+
+/* block comment */
       
 
   });
