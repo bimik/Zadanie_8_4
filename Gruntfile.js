@@ -42,8 +42,9 @@ module.exports = function(grunt) {
 
   });
   // Load the plugins tasks 
-  grunt.loadNpmTasks('grunt-sass', 'grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
   
